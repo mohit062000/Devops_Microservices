@@ -6,10 +6,14 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
+dockerpath="mohit062000/mludacityapi"
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
+docker login --username mohit062000
+    docker image tag mludacityapi $dockerpath
 
 # Step 3:
 # Push image to a docker repository
+docker image push $dockerpath
